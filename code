@@ -1,0 +1,16 @@
+public class LeapYear {
+
+    public static boolean isLeapYear(int year){
+
+        boolean byFour = (year % 4) == 0;
+        boolean byHundred = (year % 100) == 0;
+        boolean byFourHundred = (year % 400) ==0;
+
+        if (year < 1 || year > 9999){
+            return false;
+        } else if (byFour && !byHundred || byHundred && byFourHundred){
+            return true;
+        } return false;
+
+    }
+}
